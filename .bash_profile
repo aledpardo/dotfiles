@@ -41,16 +41,6 @@ if [ -f ~/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
-if [ -d "$HOME/Library/Python/2.7/bin" ]; then
-    PATH="$HOME/Library/Python/2.7/bin:$PATH"
-fi
-
-# Powerline
-if [ -f /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-fi
-
-
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
@@ -121,31 +111,29 @@ fi
 ###-tns-completion-end-###
 
 # Load direnv
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"
 
 # PATH
-export PATH='~/.rvm/gems/ruby-1.9.2-p320/bin:~/.rvm/gems/ruby-1.9.2-p320@global/bin:~/.rvm/rubies/ruby-1.9.2-p320/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:~/Development/android/sdk/tools/:~/Development/android/sdk/platform-tools/'
-export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Users/mgechev/Development/wabt/out/clang/Debug:$HOME/Library/Haskell/bin
+# export PATH='~/.rvm/gems/ruby-1.9.2-p320/bin:~/.rvm/gems/ruby-1.9.2-p320@global/bin:~/.rvm/rubies/ruby-1.9.2-p320/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin/:~/Development/android/sdk/tools/:~/Development/android/sdk/platform-tools/'
+# export PATH=${PATH}:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Users/mgechev/Development/wabt/out/clang/Debug:$HOME/Library/Haskell/bin
 export PATH=$GOPATH/bin:$PATH
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH=$PATH:/usr/local/git/bin
-export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=/usr/texbin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="$PATH:/usr/local/git/bin:$HOME/.golang/bin"
-export PATH="$PATH:$DART_SDK/bin"
-export PATH="$PATH:/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/local/heroku/bin:~/bin:/bin:/opt/local/bin:/opt/local/sbin:~/.rvm/gems/ruby-2.0.0-p576/bin:~/.rvm/gems/ruby-2.0.0-p576@global/bin:~/.rvm/rubies/ruby-2.0.0-p576/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin:~/Development/android/sdk/tools:~/Development/android/sdk/platform-tools/:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/usr/local/git/bin:~/.rvm/bin:/usr/local/git/bin:/usr/local/opt/dart/libexec/bin:/Applications/Julia-0.6.app/Contents/Resources/julia/bin"
+# export PATH="$PATH:$DART_SDK/bin"
+# export PATH="$PATH:/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/usr/texbin:/usr/local/heroku/bin:~/bin:/bin:/opt/local/bin:/opt/local/sbin:~/.rvm/gems/ruby-2.0.0-p576/bin:~/.rvm/gems/ruby-2.0.0-p576@global/bin:~/.rvm/rubies/ruby-2.0.0-p576/bin:~/.rvm/bin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Applications/apache-ant-1.9.2/bin:~/Development/android/sdk/tools:~/Development/android/sdk/platform-tools/:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/usr/local/git/bin:~/.rvm/bin:/usr/local/git/bin:/usr/local/opt/dart/libexec/bin:/Applications/Julia-0.6.app/Contents/Resources/julia/bin"
 export PATH="$HOME/.node/bin:$PATH"
 export PATH="$PATH:$HOME/.npm-packages/bin";
 
-export ANDROID_HOME=~/Development/android/sdk
+# export ANDROID_HOME=~/Development/android/sdk
 export TERMINFO="$HOME/.terminfo"
 
-export GOPATH="$HOME/Projects/golang"
-export DARTIUM_BIN="/usr/local/opt/dart/Chromium.app"
-export DART_SDK="/usr/local/opt/dart/libexec"
-export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4/"
+export GOPATH="$HOME/repos/golang"
+# export DARTIUM_BIN="/usr/local/opt/dart/Chromium.app"
+# export DART_SDK="/usr/local/opt/dart/libexec"
+# export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4/"
 export LESS='-R'
-export LESSOPEN='|~/.lessfilter %s'
-
+export LESSOPEN='|~/.lessfilter
+ %s'

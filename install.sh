@@ -1,0 +1,12 @@
+cp .aliases ~/.aliases
+cp .bash_profile ~/.bash_profile
+cp .bash_prompt ~/.bash_prompt
+cp .bashrc ~/.bashrc
+cp .editorconfig ~/.editorconfig
+cp .functions ~/.functions
+cp .gitconfig ~/.gitconfig
+cp .gitignore ~/.gitignore
+cp .profile ~/.profile
+cp .slate.js ~/.slate
+cp .tmux.conf ~/.tmux
+cp .vimrc ~/.vimrc
